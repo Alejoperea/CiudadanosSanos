@@ -14,8 +14,5 @@
 
 		public ICollection<Paciente>? Pacientes { get; set; } = default!;    // Propiedad de navegacion 
 
-
-
-
 	}
 }

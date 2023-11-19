@@ -1,0 +1,52 @@
+﻿@page
+@model CiudadanosSanos.Pages.AtencionMedicas.CreateModel
+@{
+	ViewData["Title"] = "Create";
+}
+<h1> Create</h1>
+
+<h4> Atencion Medica</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="AtencionMedica.Id" class="control-label"></label>
+				<input asp-for="AtencionMedica.Id" class="form-control" disabled="disabled" />
+				<span asp-validation-for="AtencionMedica.Id" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="AtencionMedica.NameMedico" class="control-label"></label>
+				<input asp-for="AtencionMedica.NameMedico" class="form-control" />
+				<span asp-validation-for="AtencionMedica.NamePaciente" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="AtencionMedica.NamePaciente" class="control-label"></label>
+				<input asp-for="AtencionMedica.NamePaciente" class="form-control" />
+				<span asp-validation-for="AtencionMedica.NamePaciente" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="AtencionMedica.Fecha" class="control-label"></label>
+				<input asp-for="AtencionMedica.Fecha" class="form-control" />
+				<span asp-validation-for="AtencionMedica.Fecha" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="AtencionMedica.PacienteId" class="control-label"></label>
+				<input asp-for="AtencionMedica.PacienteId" class="form-control" />
+				<span asp-validation-for="AtencionMedica.PacienteId" class="text-danger"></span>
+			</div>
+			<div class="form-group mt-3">
+				<input type="submit" value="Create" class="btn btn-success" />
+				<a asp-page="Index" class="btn btn-primary">Back to List</a>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
