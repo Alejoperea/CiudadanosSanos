@@ -11,6 +11,10 @@ namespace CiudadanosSanos.Models
 		public int Edad {  get; set; }
 		public string Sexo { get; set; }	
 
-		public ICollection<AtencionMedica> AtencionMedicas { get; set; }
+		public int Telefono { get; set; }
+
+		public string? Description { get; set; }
+
+		public ICollection<AtencionMedica>? AtencionMedicas { get; set; } // propiedad de navegacion
 	}
 }

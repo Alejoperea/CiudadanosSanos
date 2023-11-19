@@ -1,3 +1,6 @@
+using CiudadanosSanos.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace CiudadanosSanos
 {
 	public class Program
@@ -8,6 +11,11 @@ namespace CiudadanosSanos
 
 			// Add services to the container.
 			builder.Services.AddRazorPages();
+
+			//Agregando el contexto CiudadanosSanosContext a la aplicacion 
+			builder.Services.AddDbContext<CiudadanosSanosContext>(options =>
+				options.UseSqlServer(builder.Configuration.GetConnectionString("CiudadanosSanos"))
+				);
 
 			var app = builder.Build();
 
