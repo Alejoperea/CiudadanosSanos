@@ -1,11 +1,13 @@
 using CiudadanosSanos.Data;
 using CiudadanosSanos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace CiudadanosSanos.Pages.Pacientes
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
 		private readonly CiudadanosSanosContext _context;

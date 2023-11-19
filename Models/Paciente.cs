@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace CiudadanosSanos.Models
 {
-	public class Paciente
+    public class Paciente
 	{
 		public int Id { get; set; } // Llave primaria 
 

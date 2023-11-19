@@ -12,8 +12,14 @@ namespace CiudadanosSanos
 			// Add services to the container.
 			builder.Services.AddRazorPages();
 
-			//Agregando el contexto CiudadanosSanosContext a la aplicacion 
-			builder.Services.AddDbContext<CiudadanosSanosContext>(options =>
+            builder.Services.AddAuthentication().AddCookie("MyCookieAuth", options => {
+
+                options.Cookie.Name = "MyCookieAuth";
+                options.LoginPath = "/Account/Login"; 
+            });
+
+            //Agregando el contexto CiudadanosSanosContext a la aplicacion 
+            builder.Services.AddDbContext<CiudadanosSanosContext>(options =>
 				options.UseSqlServer(builder.Configuration.GetConnectionString("CiudadanosSanos"))
 				);
 
