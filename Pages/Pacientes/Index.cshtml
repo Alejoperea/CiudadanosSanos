@@ -1,0 +1,62 @@
+﻿@page
+@model CiudadanosSanos.Pages.Pacientes.IndexModel
+@{
+	ViewData["Title"] = "Pacientes";
+}
+<h1>Pacientes</h1>
+<p>
+	<a asp-page="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor( model => model.Pacientes[0].Name)
+			</th>
+			<th>
+				@Html.DisplayNameFor( model => model.Pacientes[0].Edad)
+			</th>
+			<th>
+				@Html.DisplayNameFor( model => model.Pacientes[0].Telefono)
+			</th>
+			<th>
+				@Html.DisplayNameFor( model => model.Pacientes[0].Sexo)
+			</th>
+			<th>
+				@Html.DisplayNameFor( model => model.Pacientes[0].Description)
+			</th>
+			<th>Actions</th>
+
+		</tr>
+	</thead>
+	<tbody>
+
+		@foreach (var item in Model.Pacientes)
+		{
+
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Name)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Edad)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Telefono)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Sexo)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Description)
+				</td>
+				<td>
+					<span></span>
+				</td>
+			</tr>
+
+		}
+	</tbody>
+
+
+</table>
