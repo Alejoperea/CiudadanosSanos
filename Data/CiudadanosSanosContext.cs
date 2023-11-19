@@ -11,6 +11,7 @@ namespace CiudadanosSanos.Data
 		public DbSet<AtencionMedica> AtencionMedicas { get; set; }
 		public DbSet<Paciente> Pacientes { get; set; }
 
+		// Aquie se configuro el db context
 
 		//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		//{
